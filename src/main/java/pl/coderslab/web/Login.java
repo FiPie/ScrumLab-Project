@@ -51,7 +51,7 @@ public class Login extends HttpServlet {
                 session.setAttribute( "lastName", user.getLastName() );
                 session.setAttribute( "email", user.getEmail() );
                 session.setAttribute( "id", user.getId() );
-                int id = (Integer) session.getAttribute( "ws" );
+                int id = (Integer) session.getAttribute( "id" );
                 System.out.println( "ID z sesji wynosi: " + id );
                 session.setAttribute( "plans", howManyPlans( (int) session.getAttribute( "id" ) ) );
                 session.setAttribute( "recipes", recipeCount( (int) session.getAttribute( "id" ) ) );
